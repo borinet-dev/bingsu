@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<script>
+		(function() {
+			// 사용자 에이전트 정보를 가져옵니다.
+			var userAgent = navigator.userAgent.toLowerCase();
+
+			// 브라우저가 크롬인지 확인합니다.
+			var isChrome = /chrome/.test(userAgent) && !/edge|edg|opr/.test(userAgent);
+
+			// 크롬이 아니라면 팝업 창을 띄웁니다.
+			if (!isChrome) {
+				alert('이 페이지는 크롬에 최적화되어 있습니다. 크롬 브라우저에서 접속해 주세요.');
+			}
+		})();
+	</script>
+	<style>
+		.count-color { color: red; text-shadow: 2px 2px 2px black; }
+		.info-color { color: yellow; text-shadow: 2px 2px 2px black; }
+		.info-color2 { color: red; text-shadow: 1px 1px 1px black; }
+		.info-color3 { color: black; text-shadow: 1px 1px 1px gray; }
+		.s1 { text-shadow: 4px 4px 5px black; }
+		.s2 { text-shadow: 2px 2px 2px black; }
+		.s3 { text-shadow: 1px 1px 1px black; }
+		.bg-2a2a2a { background-color: #2a2a2a !important; }
+		.bg-2a2a2a .nav-link { color: white !important; transition: color 0.3s ease-in-out; }
+		.bg-2a2a2a .nav-link:hover { color: #90ee90 !important; }
+		.border-bottom { color: red !important; text-decoration: none; transition: color 0.3s ease-in-out; }
+		.border-bottom:hover { color: darkred !important; }
+		body { background-color: #2a2a2a; color: white; font-family: sans-serif; line-height: 1.6; }
+		table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+		th, td { border: 1px solid white; padding: 8px; }
+		th { background-color: #444; }
+		h3 { margin-top: 30px; color: #ffd700; }
+	</style>
+	<meta charset="utf-8">
+	<title>나비</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="" name="keywords">
+	<meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="https://borinet-dev.github.io/img/wassub_icon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="https://borinet-dev.github.io/css/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="https://borinet-dev.github.io/css/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://borinet-dev.github.io/css/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="https://borinet-dev.github.io/css/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+	<link href="https://borinet-dev.github.io/css/css/board.css" rel="stylesheet">
+	<link href="https://borinet-dev.github.io/css/css/style2.css" rel="stylesheet">
+	<link href="https://borinet-dev.github.io/css/css/style3.css" rel="stylesheet">
+</head>
+
+<body style="background-color: #2a2a2a;">
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-2a2a2a navbar-dark sticky-top p-0">
+        <a href="https://l2jnavi.org" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="https://raw.githubusercontent.com/borinet-dev/img/main/logo_wassub.png" style="max-width: auto; height: auto;">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+				<a onclick="window.open('https://discord.gg/u7MJEsPpUJ')" style="cursor:pointer;" class="nav-item nav-link"><b>디스코드 입장하기</b></a>
+                <a onclick="window.open('../../AccountClassic/', '', 'location=no, width=730, height=650')" style="cursor:pointer;" class="nav-item nav-link"><b>계정관리</b></a>
+				<a onclick="window.open('../../downloads/', '', 'location=no, width=850, height=439, scrollbars=yes')" style="cursor:pointer;" class="nav-item nav-link"><b>다운로드</b></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h1 class="display-3 text-white mb-4 animated slideInDown s2">'빙수 장인과 신비한 얼음칼' 이벤트</h1>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Start -->
+<div id="viewer" class="white viewer_style rd_nav_blk">
+	<div style="background-color: #2a2a2a; color: white; id="bd_7139_123793" class="bd clear   hover_effect" data-default_style="viewer" data-bdfilestype="" data-bdnavside="N" style="max-width:px">
+	<article>
+
+<div style="box-sizing: border-box; color: rgb(31, 31, 31); font-family: -apple-system, BlinkMacSystemFont, Roboto, &quot;맑은 고딕&quot;, &quot;Malgun Gothic&quot;, &quot;Microsoft JhengHei&quot;, meiryo, &quot;MS PGothic&quot;, 돋움, Dotum, sans-serif; font-size: 15px;"><span style="color: rgb(51, 102, 153);"><img src="https://raw.githubusercontent.com/borinet-dev/newyear/main/main_1.png" alt="main.png" width="650" editor_component="image_link" />
+<br /></span></div>
+<p><br /></p>
+<p style="line-height: 25px; font-family: sans-serif; letter-spacing: -1px; font-size: 20px; font-weight: bold; color: rgb(255, 177, 26); text-shadow: midnightblue 1px 1px 1.2px; border-bottom: 3px solid rgb(255, 177, 26);">이벤트 기간: 9월 8일(월) 07시&nbsp;~ 9월 22일(월) 06시 까지</p>
+<br>
+<p><font color=white size=3>아덴 월드에 무더위를 시원하게 날려줄 빙수 장인 ‘뚜루루’가 찾아왔습니다.<br>
+사냥으로 획득 가능한 ‘신비한 얼음 결정’으로 다양한 빙수도 만들고, 대박 행운의 기회에 도전하세요!</font></p>
+<br>
+
+<img src="https://borinet-dev.github.io/bingsu/panel1.png" width="650" editor_component="image_link" /><br><br>
+<div class="document_123793_4 xe_content">
+  <p style="margin-bottom:0; color:skyblue;">
+    1. 각 마을 빙수 장인 NPC ‘뚜루루’를 통해 ‘환상의 빙수’ 6개를 획득할 수 있습니다. (3차전직 이상 계정당 1일 1회)
+  </p>
+  <table style="color:white; border:1px solid white; border-collapse:collapse; margin:0; border-spacing:0; padding:0;">
+    <tr>
+      <th style="color:white; border:1px solid white; text-align:center;">아이템명</th>
+      <th style="color:white; border:1px solid white; text-align:center;">효과</th>
+    </tr>
+    <tr>
+      <td style="color:white; border:1px solid white; text-align:center;">
+        <img src="https://borinet-dev.github.io/bingsu/etc_candy_basket_i00.png"><br>
+        환상의 빙수
+      </td>
+      <td style="color:white; border:1px solid white; text-align:center;">
+        사용 시 30분 동안<br>
+        공격력/마법력/방어력/마법 저항 5%<br>
+        EXP/SP 10% 증가
+      </td>
+    </tr>
+  </table>
+</div>
+<br>
+<p style="margin-bottom:0; color:skyblue;">
+  2. 빙수 장인 NPC ‘뚜루루’를 통해 추가로 ‘환상의 빙수’를 구매할 수 있습니다.
+</p>
+<table style="color:white; border:1px solid white; border-collapse:collapse; margin:0; border-spacing:0; padding:0;">
+  <tr>
+    <th style="color:white; border:1px solid white; text-align:center;">교환 아이템</th>
+    <th style="color:white; border:1px solid white; text-align:center;">필요 아이템</th>
+  </tr>
+  <tr>
+    <td style="color:white; border:1px solid white; text-align:center;">환상의 빙수 X 1</td>
+    <td style="color:white; border:1px solid white; text-align:center;">15,000,000 아데나</td>
+  </tr>
+  <tr>
+    <td style="color:white; border:1px solid white; text-align:center;">환상의 빙수 X 20</td>
+    <td style="color:white; border:1px solid white; text-align:center;">신비한 얼음 결정 X 100</td>
+  </tr>
+</table>
+<br>
+	  <p><font color=skyblue>3. ‘신비한 얼음 결정’은 사냥터에서 사냥을 통해 획득할 수 있습니다. (하루 최대 100개까지 획득 가능)</p>
+<br>
+<img src="https://borinet-dev.github.io/bingsu/panel2.png" width="650" editor_component="image_link" /><br><br>
+<p style="margin-bottom:0; color:skyblue;">
+  1. ‘신비한 얼음 결정’을 이벤트 컬렉션에 등록하면 컬렉션 효과 및 ‘빙수 장인의 신비한 얼음칼’을 컬렉션 추가 보상으로 획득할 수 있습니다.
+</p>
+<div style="margin:0; padding:0;">
+  <img src="https://borinet-dev.github.io/bingsu/collection.png" width="320" 
+       style="display:block; margin:0; padding:0;" editor_component="image_link" />
+</div>
+<br>
+<p style="margin-bottom:0; color:white;">[이벤트 컬렉션 정보]</p>
+<table style="color:white; border:1px solid white; border-collapse:collapse; margin:0; border-spacing:0; padding:0;">
+  <tr>
+    <th style="color:white; border:1px solid white;"><center>컬렉션명</center></th>
+    <th style="color:white; border:1px solid white;"><center>등록 아이템</center></th>
+    <th style="color:white; border:1px solid white;"><center>효과</center></th>
+    <th style="color:white; border:1px solid white;"><center>추가 보상 아이템</center></th>
+  </tr>
+  <tr>
+    <td style="color:white; border:1px solid white;"><center>빙수 장인</center></td>
+    <td style="color:white; border:1px solid white;"><center>신비한 얼음 결정 X 500</center></td>
+    <td style="color:white; border:1px solid white;"><center>스킬 크리티컬 확률 5%, 대미지 10% 증가<br>최대 HP +10% 증가</center></td>
+    <td style="color:white; border:1px solid white;"><center><img src="https://borinet-dev.github.io/bingsu/frozen_weapon_two_hand_sword.png"><br>빙수 장인의 신비한 얼음칼 X 1</center></td>
+  </tr>
+</table>
+<p style="margin-top:0; margin-bottom:0; line-height:1; color:red;">
+※ 이벤트 컬렉션은 기간제 컬렉션으로 이벤트 종료 후 <b>10월 06일</b> 정기점검 전까지 효과 적용
+</p>
+<br>
+<p style="margin-bottom:0; color:skyblue;">2. ‘빙수 장인의 신비한 얼음 칼’을 [착용]하면 아이템 스킬을 통해 얼음 디저트(보상 아이템)을 제작할 수 있습니다.</p>
+<p style="margin-bottom:0; color:white;">&nbsp;&nbsp;&nbsp;- 스킬 창(단축키: Alt+K)에서 직접 사용하거나 숏컷창에 등록해 사용할 수 있습니다.</p>
+<div style="margin:0; padding:0;">
+  <img src="https://borinet-dev.github.io/bingsu/skill.png" width="297" 
+       style="display:block; margin:0; padding:0;" editor_component="image_link" />
+</div>
+<br>
+<p style="margin-bottom:0; color:skyblue;">3. ‘얼음 디저트’ 제작 시 정해진 확률에 따라 아래 아이템 중 1개를 획득하게 됩니다.</p>
+<table style="color:white; border:1px solid white; border-collapse:collapse; margin:0; border-spacing:0; padding:0;">
+  <tr>
+    <th style="color:white; border:1px solid white; text-align:center;">소모 아이템</th>
+    <th style="color:white; border:1px solid white; text-align:center;">획득 아이템</th>
+    <th style="color:white; border:1px solid white; text-align:center;">효과</th>
+  </tr>
+  
+  <!-- 신비한 얼음 결정 X20 -->
+  <tr>
+    <td style="color:white; border:1px solid white; text-align:center;" rowspan="3">
+      <img src="https://borinet-dev.github.io/bingsu/etc_oriharukon_ore_i00.png"><br>
+      신비한 얼음 결정 X 20
+    </td>
+    <td style="color:white; border:1px solid white; text-align:center;">
+      <img src="https://borinet-dev.github.io/bingsu/etc_candy_basket_i00.png"><br>
+      알록달록 얼음 빙수 X 1
+    </td>
+    <td style="color:white; border:1px solid white; text-align:center;">
+		사용 시 아래 아이템 중 2~4개 확률 획득<br><br>
+		방어구 강화석 X 1개<br>
+		최고급 힘의 염료&lt;Str+4 Con-2&gt;<br>
+		최고급 힘의 염료&lt;Str+4 Dex-2&gt;<br>
+		최고급 체력의 염료&lt;Con+4 Str-2&gt;<br>
+		최고급 체력의 염료&lt;Con+4 Dex-2&gt;<br>
+		최고급 민첩의 염료&lt;Dex+4 Str-2&gt;<br>
+		최고급 민첩의 염료&lt;Dex+4 Con-2&gt;<br>
+		최고급 지능의 염료&lt;Int+4 Men-2&gt;<br>
+		최고급 지능의 염료&lt;Int+4 Wit-2&gt;<br>
+		최고급 정신의 염료&lt;Men+4 Int-2&gt;<br>
+		최고급 정신의 염료&lt;Men+4 Wit-2&gt;<br>
+		최고급 재치의 염료&lt;Wit+4 Int-2&gt;<br>
+		최고급 재치의 염료&lt;Wit+4 Men-2&gt;
+    </td>
+  </tr>
+  
+  <tr>
+    <td style="color:white; border:1px solid white; text-align:center;">
+      <img src="https://borinet-dev.github.io/bingsu/etc_bm_defence_cookie.png"><br>
+      차가운 얼음 쿠키 X 1
+    </td>
+    <td style="color:white; border:1px solid white; text-align:center;">
+		사용 시 아래 아이템 중 1개 확률 획득<br><br>
+		무기 강화석 X 1개<br>
+		다이아몬드 - Lv1<br>
+		펄 - Lv1<br>
+		아쿠아마린 - Lv1<br>
+		에메랄드 - Lv1<br>
+		오팔 - Lv1<br>
+		옵시디언 - Lv1<br>
+		힐량 증가 쥬얼 - Lv1<br>
+		긴급 회복 쥬얼 - Lv1<br>
+		토파즈 - Lv1<br>
+		아메시스트 - Lv1<br>
+		캐츠아이 - Lv1<br>
+		탄자나이트 - Lv1<br>
+		가넷 - Lv1<br>
+		바이탈스톤 - Lv1
+	</td>
+  </tr>
+  
+  <tr>
+    <td style="color:white; border:1px solid white; text-align:center;">
+      <img src="https://borinet-dev.github.io/bingsu/g_ev_sweet_icewater.png"><br>
+      환상의 빙수 X 4
+    </td>
+    <td style="color:white; border:1px solid white; text-align:center;">
+      사용 시 30분 동안<br>
+      공격력/마법력/방어력/마법 저항 +5%<br>
+      EXP/SP +10% 증가<br><br>
+      사망 시 유지<br>
+      올림피아드 입장 시 삭제
+    </td>
+  </tr>
+</table>
+
+
+
+</div>
+</div>
+</div></div><br><br>
+   <!-- End -->
+        
+
+    <!-- Copyright Start -->
+	<div id="footer-placeholder"></div>
+	<script>
+	  fetch("https://borinet-dev.github.io/head/footer.html?ver=" + Date.now())
+	    .then(r => r.text())
+	    .then(html => {
+	      document.getElementById("footer-placeholder").innerHTML = html;
+	    });
+	</script>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://borinet-dev.github.io/css/lib/wow/wow.min.js"></script>
+	<script src="https://borinet-dev.github.io/css/lib/easing/easing.min.js"></script>
+	<script src="https://borinet-dev.github.io/css/lib/waypoints/waypoints.min.js"></script>
+	<script src="https://borinet-dev.github.io/css/lib/owlcarousel/owl.carousel.min.js"></script>
+	<script src="https://borinet-dev.github.io/css/lib/counterup/counterup.min.js"></script>
+	<script src="https://borinet-dev.github.io/css/lib/parallax/parallax.min.js"></script>
+	<script src="https://borinet-dev.github.io/css/lib/isotope/isotope.pkgd.min.js"></script>
+	<script src="https://borinet-dev.github.io/css/lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://borinet-dev.github.io/css/js/main.js"></script>
+    </body>
+</html>
